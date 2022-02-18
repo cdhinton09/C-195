@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="370.0" prefWidth="1035.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeScreenController">
+   <children>
+      <Label layoutX="29.0" layoutY="14.0" text="Home " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="20.0" layoutY="257.0" prefHeight="40.0" prefWidth="700.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <buttons>
+            <Button minWidth="120.0" mnemonicParsing="false" onAction="#customerRecordsButtonAction" onKeyPressed="#customerRecordsButtonAction" prefWidth="180.0" text="Customer Records" />
+            <Button minWidth="100.0" mnemonicParsing="false" onAction="#appointmentButtonAction" onKeyPressed="#appointmentButtonAction" prefWidth="110.0" text="Appointment" />
+            <ComboBox fx:id="reportsCB" minWidth="120.0" onAction="#reportAction" onKeyPressed="#reportAction" prefWidth="120.0" promptText="Reports" />
+            <Button mnemonicParsing="false" onAction="#exitButtonAction" onKeyPressed="#exitButtonAction" prefWidth="60.0" text="Exit" />
+        </buttons>
+      </ButtonBar>
+      <TableView fx:id="homeScreenTV" layoutX="14.0" layoutY="47.0" prefHeight="200.0" prefWidth="995.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+         <columns>
+            <TableColumn fx:id="appointmentIDTC" prefWidth="140.0" text="Appointment ID" />
+            <TableColumn fx:id="titleTC" prefWidth="50.0" text="Title" />
+            <TableColumn fx:id="descriptionTC" prefWidth="120.0" text="Description" />
+            <TableColumn fx:id="locationTC" prefWidth="100.0" text="Location" />
+            <TableColumn fx:id="contactIDTC" text="Contact ID" />
+            <TableColumn fx:id="typeTC" text="Type" />
+            <TableColumn fx:id="startTC" prefWidth="130.0" text="Start Date/Time" />
+            <TableColumn fx:id="endTC" prefWidth="120.0" text="End Date/Time" />
+            <TableColumn fx:id="customerIDTC" prefWidth="100.0" text="Customer ID" />
+            <TableColumn fx:id="userIDTC" prefWidth="75.0" text="User ID" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

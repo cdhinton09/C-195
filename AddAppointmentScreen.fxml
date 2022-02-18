@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddAppointmentScreenController">
+    <children>
+        <GridPane layoutX="31.0" layoutY="71.0" prefHeight="400.0" prefWidth="350.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="60.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="109.60000610351562" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Appointment ID" />
+                <Label text="Title" GridPane.rowIndex="1" />
+                <Label text="Description" GridPane.rowIndex="2" />
+                <Label text="Location" GridPane.rowIndex="3" />
+                <Label text="Type" GridPane.rowIndex="4" />
+                <Label text="Start Time/Date" GridPane.rowIndex="5" />
+                <Label text="End Time/Date" GridPane.rowIndex="6" />
+                <Label text="Create Date" GridPane.rowIndex="7" />
+                <Label text="Created By" GridPane.rowIndex="8" />
+                <Label text="Customer ID" GridPane.rowIndex="9" />
+                <Label text="User ID" GridPane.rowIndex="10" />
+                <Label text="Contact" GridPane.rowIndex="11" />
+                <TextField fx:id="appointmentIDTF" GridPane.columnIndex="1" />
+                <TextField fx:id="titleTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="descriptionTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="locationTF" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="startTimeTF" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <TextField fx:id="endTimeTF" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <TextField fx:id="createDateTF" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <TextField fx:id="createdByTF" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                <TextField fx:id="customerIDTF" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                <TextField fx:id="userIDTF" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                <ComboBox fx:id="contactIDCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <ComboBox fx:id="typeCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+        <Label layoutX="28.0" layoutY="21.0" text="Add Appointment" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <ButtonBar layoutX="230.0" layoutY="427.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <buttons>
+                <Button mnemonicParsing="false" onAction="#addAppointmentButtonAction" text="Add" />
+                <Button mnemonicParsing="false" onAction="#cancelAppointmentButtonAction" text="Cancel" />
+            </buttons>
+        </ButtonBar>
+    </children>
+</AnchorPane>

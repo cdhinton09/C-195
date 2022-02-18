@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddCustomerScreenController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="360.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.20001220703125" minWidth="10.0" prefWidth="130.4000244140625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.5999755859375" minWidth="10.0" prefWidth="176.80001220703122" />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="30.0" prefWidth="133.0" text="Add Customer" GridPane.columnSpan="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Customer ID" GridPane.rowIndex="1" />
+            <Label text="Name" GridPane.rowIndex="2" />
+            <Label text="Address" GridPane.rowIndex="3" />
+            <Label text="Postal Code" GridPane.rowIndex="4" />
+            <Label text="Phone Code" GridPane.rowIndex="7" />
+            <Label text="Phone Number" GridPane.rowIndex="8" />
+            <Label text="Created By" GridPane.rowIndex="9" />
+            <Label fx:id="countryID" text="Country" GridPane.rowIndex="5" />
+            <Label fx:id="firstLevelDivisionID" text="State/Provinces" GridPane.rowIndex="6" />
+            
+            <TextField fx:id="customerIDTF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="customerNameTF" onAction="#addCustomerButtonAction" text="Chris" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="addressTF" onAction="#addCustomerButtonAction" text="2211 NW Federal Hwy" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="postalCodeTF" onAction="#addCustomerButtonAction" text="34994" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="countryIDCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox fx:id="firstLevelDivisionIDCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="phoneCodeTF" onAction="#addCustomerButtonAction" text="1" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="phoneNumberTF" onAction="#addCustomerButtonAction" text="859-550-3258" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="createdByTF" onAction="#addCustomerButtonAction" text="Chris Hinton" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            
+            
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="106.0" layoutY="334.0" prefHeight="20.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#addCustomerButtonAction" onKeyPressed="#addCustomerButtonAction" text="Add" />
+            <Button mnemonicParsing="false" onAction="#cancelButtonAction" onKeyPressed="#cancelButtonAction" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

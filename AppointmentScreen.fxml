@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentController">
+   <children>
+      <Label layoutX="46.0" layoutY="23.0" text="Appointment" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="720.0" layoutY="633.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <buttons>
+            <Button fx:id="addApptButton" mnemonicParsing="false" onAction="#addButtonAction" text="Add" />
+            <Button fx:id="updateApptButton" mnemonicParsing="false" onAction="#updateButtonAction" text="Update" />
+            <Button fx:id="deleteApptButton" mnemonicParsing="false" onAction="#deleteButtonAction" text="Delete" />
+            <Button fx:id="backApptButton" mnemonicParsing="false" onAction="#backButtonAction" text="Back" />
+         </buttons>
+      </ButtonBar>
+      <TableView fx:id="appointmentListTV" layoutX="-98.0" layoutY="111.0" prefHeight="300.0" prefWidth="995.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+         <columns>
+            <TableColumn fx:id="appointmentIDTC" prefWidth="140.0" text="Appointment ID" />
+            <TableColumn fx:id="titleTC" prefWidth="50.0" text="Title" />
+            <TableColumn fx:id="descriptionTC" prefWidth="120.0" text="Description" />
+            <TableColumn fx:id="locationTC" prefWidth="100.0" text="Location" />
+            <TableColumn fx:id="contactTC" text="Contact" />
+            <TableColumn fx:id="typeTC" text="Type" />
+            <TableColumn fx:id="startTimeTC" prefWidth="130.0" text="Start Date/Time" />
+            <TableColumn fx:id="endTimeTC" prefWidth="120.0" text="End Date/Time" />
+            <TableColumn fx:id="customerIDTC" prefWidth="100.0" text="Customer ID" />
+            <TableColumn fx:id="userIDTC" prefWidth="75.0" text="User ID" />
+         </columns>
+      </TableView>
+      <ButtonBar layoutX="236.0" layoutY="15.0" prefHeight="40.0" prefWidth="500.0">
+         <buttons>
+            <RadioButton fx:id="allApptRB" mnemonicParsing="false" onAction="#showAllApptTV" text="All Appointments" />
+            <RadioButton fx:id="weeklyApptRB" mnemonicParsing="false" onAction="#showWeeklyTV" text="Weekly Appointments" />
+            <RadioButton fx:id="monthlyApptRB" mnemonicParsing="false" onAction="#showMonthlyTV" text="Monthly Appointments" />
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
