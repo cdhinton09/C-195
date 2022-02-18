@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Reports.ContactScheduleController">
+   <children>
+      <HBox layoutX="37.0" layoutY="34.0" prefHeight="35.0" prefWidth="500.0" spacing="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label text="Schedule For: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="contactCB" prefWidth="300.0" promptText="Select Contact" />
+         </children>
+      </HBox>
+      <TableView fx:id="contactTV" layoutX="56.0" layoutY="82.0" prefHeight="200.0" prefWidth="502.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <columns>
+          <TableColumn fx:id="apptIDTC" prefWidth="113.60000610351562" text="Appointment ID" />
+          <TableColumn fx:id="titleTC" prefWidth="76.79998779296875" text="Title" />
+            <TableColumn fx:id="typeTC" prefWidth="80.79998779296875" text="Type" />
+            <TableColumn fx:id="descriptionTC" prefWidth="73.5999755859375" text="Description" />
+            <TableColumn fx:id="startTC" prefWidth="72.7999267578125" text="Start" />
+            <TableColumn fx:id="endTC" prefWidth="36.800048828125" text="End" />
+            <TableColumn fx:id="customerIDTC" prefWidth="75.0" text="Customer ID" />
+        </columns>
+        
+        
+      </TableView>
+      <ButtonBar layoutX="519.0" layoutY="297.0" prefHeight="40.0" prefWidth="249.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <buttons>
+          <Button fx:id="getScheduleButton" mnemonicParsing="false" onAction="#getScheduleAction" prefHeight="26.0" prefWidth="110.0" text="Get Schedule" />
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonAction" text="Back" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
